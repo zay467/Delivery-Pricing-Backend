@@ -1,7 +1,24 @@
-import express from "express";
+import express, { Application } from "express";
+import mongoose from "mongoose";
+import { ConnectionOptions } from "tls";
+import bodyParser from "body-parser";
+import cors from "cors";
+import config from "./config/config";
+import userRouter from "./routers/user";
 
-const app: express.Application = express();
+const app: Application = express();
 
-const PORT: number = 8000;
+mongoose
+  .connect(config.mongo.url, config.mongo.options as ConnectionOptions)
+  .then(() => console.log("DB Connected."));
 
-app.listen(PORT, () => console.log(`App is running on port ${PORT}.`));
+app.use(bodyParser.json());
+app.use(cors());
+
+app.use("/api", userRouter);
+
+app.listen(config.server.port, () =>
+  console.log(
+    `Service is running on port ${config.server.hostname}:${config.server.port}.`
+  )
+);
