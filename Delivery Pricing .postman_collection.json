@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "c3467143-6a33-4a12-90e4-268568faedfe",
+		"name": "Delivery Pricing ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Courier",
+			"item": [
+				{
+					"name": "/api/courier/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/courier/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courier",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courier/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InpheSIsImlhdCI6MTYzNzgxOTI3MywiZXhwIjozMjc1NjQ0NTQ2fQ.6b9XrqD4fy3n_HFMLhdSZOlCaoIIAjChzZYjA9kGnYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"state\": \"Ayeyarwady Division\",\r\n        \"city\": \"Danubyu\",\r\n        \"postal_code\": \"10151\",\r\n        \"prices\": [\r\n            {\r\n                \"name\": \"Myanmar Daily\",\r\n                \"price\": \"3500\"\r\n            },\r\n            {\r\n                \"name\": \"Ninja Van\",\r\n                \"price\": \"3000\"\r\n            },\r\n            {\r\n                \"name\": \"MGL Express\",\r\n                \"price\": \"4300\"\r\n            },\r\n            {\r\n                \"name\": \"Royal Express\",\r\n                \"price\": \"4000\"\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/courier/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courier",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courier/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InpheSIsImlhdCI6MTYzNzgxOTI3MywiZXhwIjozMjc1NjQ0NTQ2fQ.6b9XrqD4fy3n_HFMLhdSZOlCaoIIAjChzZYjA9kGnYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"state\": \"Ayeyarwady Division\",\r\n        \"city\": \"Danubyu\",\r\n        \"postal_code\": \"10151\",\r\n        \"prices\": [\r\n            {\r\n                \"name\": \"Myanmar Daily\",\r\n                \"price\": \"3500\"\r\n            },\r\n            {\r\n                \"name\": \"Ninja Van\",\r\n                \"price\": \"3000\"\r\n            },\r\n            {\r\n                \"name\": \"MGL Express\",\r\n                \"price\": \"4300\"\r\n            },\r\n            {\r\n                \"name\": \"Royal Express\",\r\n                \"price\": \"4000\"\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/courier/619f4a20ddfa338d778fc587",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courier",
+								"619f4a20ddfa338d778fc587"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courier/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InpheSIsImlhdCI6MTYzNzgxOTI3MywiZXhwIjozMjc1NjQ0NTQ2fQ.6b9XrqD4fy3n_HFMLhdSZOlCaoIIAjChzZYjA9kGnYQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/courier/619f4a20ddfa338d778fc587",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"courier",
+								"619f4a20ddfa338d778fc587"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"zay\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"zay\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
