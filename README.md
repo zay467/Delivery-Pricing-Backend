@@ -19,7 +19,7 @@ npm run dev
 
 ### Type-safe .env
 
-To type-safe variables from .env and generate .env.example
+To type-safe variables from .env and generate .env.example run.
 
 ```
 npx gen-env-types .env -o src/types/env.d.ts -e .
