@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import config from "./config/config";
 import userRouter from "./routers/user";
+import courierRouter from "./routers/courier";
 
 const app: Application = express();
 
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/api", userRouter);
+app.use("/api/courier", courierRouter);
 
 app.listen(config.server.port, () =>
   console.log(
