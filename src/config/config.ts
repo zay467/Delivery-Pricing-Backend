@@ -11,7 +11,7 @@ const MONGO_HOST = process.env.MONGO_HOST;
 
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || "localhost";
 const SERVER_PORT = process.env.SERVER_PORT || 8000;
-const SERVER_TOKEN_EXPIRETIME = process.env.SERVER_TOKEN_EXPIRETIME || 60;
+const SERVER_TOKEN_EXPIRETIME = process.env.SERVER_TOKEN_EXPIRETIME || 60; // Minutes
 const SERVER_TOKEN_SECRET =
   process.env.SERVER_TOKEN_SECRET || "superencryptedsecret";
 
