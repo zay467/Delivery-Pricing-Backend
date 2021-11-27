@@ -143,6 +143,141 @@
 			]
 		},
 		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "/api/notification",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InpheSIsImlhdCI6MTYzODAxMjk1NywiZXhwIjozMjc2MDM3OTE0fQ.HF7C-8uMTDPjBD7c3pGQCysEfHOnpNU2W6OI0MGCRu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ref\":\"DFU\",\r\n    \"title\":\"Title\",\r\n    \"paragraph\":\"Paragraph\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/notification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/notification/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InpheSIsImlhdCI6MTYzODAxMjk1NywiZXhwIjozMjc2MDM3OTE0fQ.HF7C-8uMTDPjBD7c3pGQCysEfHOnpNU2W6OI0MGCRu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ref\":\"DFU FU\",\r\n    \"title\":\"Title\",\r\n    \"paragraph\":\"Paragraph\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/notification/61a218b30d7d5058e017a24f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification",
+								"61a218b30d7d5058e017a24f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/notification/{id}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InpheSIsImlhdCI6MTYzODAxMjk1NywiZXhwIjozMjc2MDM3OTE0fQ.HF7C-8uMTDPjBD7c3pGQCysEfHOnpNU2W6OI0MGCRu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/notification/61a218b30d7d5058e017a24f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification",
+								"61a218b30d7d5058e017a24f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Register",
 			"request": {
 				"method": "POST",

@@ -6,6 +6,7 @@ import cors from "cors";
 import config from "./config/config";
 import userRouter from "./routers/user";
 import courierRouter from "./routers/courier";
+import notificationRouter from "./routers/notification";
 
 const app: Application = express();
 
@@ -18,6 +19,7 @@ app.use(cors());
 
 app.use("/api", userRouter);
 app.use("/api/courier", courierRouter);
+app.use("/api/notification", notificationRouter);
 
 app.listen(config.server.port, () =>
   console.log(
