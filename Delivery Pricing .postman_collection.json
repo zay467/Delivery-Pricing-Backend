@@ -182,7 +182,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ref\":\"DFU\",\r\n    \"title\":\"Title\",\r\n    \"paragraph\":\"Paragraph\"\r\n}",
+							"raw": "{\r\n    \"ref\":\"DFUS\",\r\n    \"title\":\"Title\",\r\n    \"paragraph\":\"Paragraph\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -270,6 +270,28 @@
 								"api",
 								"notification",
 								"61a218b30d7d5058e017a24f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/notification/ref/{app_ref}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/notification/ref/DFU",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification",
+								"ref",
+								"DFU"
 							]
 						}
 					},

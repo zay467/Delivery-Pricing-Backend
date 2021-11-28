@@ -24,8 +24,22 @@ const create = (req: Request, res: Response) => {
 const read = (req: Request, res: Response) => {
   Notification.find()
     .exec()
-    .then((couriers) => {
-      return res.status(200).json(couriers);
+    .then((notifications) => {
+      return res.status(200).json(notifications);
+    })
+    .catch((error) => {
+      return res.status(500).json({
+        message: error.message,
+        error,
+      });
+    });
+};
+
+const readByRef = (req: Request, res: Response) => {
+  Notification.findOne({ ref: req.params.ref })
+    .exec()
+    .then((notification) => {
+      return res.status(200).json(notification);
     })
     .catch((error) => {
       return res.status(500).json({
@@ -67,4 +81,4 @@ const deleteItem = (req: Request, res: Response) => {
     });
 };
 
-export default { create, read, update, deleteItem };
+export default { create, read, update, deleteItem, readByRef };
